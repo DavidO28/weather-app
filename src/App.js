@@ -1,6 +1,5 @@
-import React, { useState, useEffect, useLayoutEffect } from "react";
+import React, { useState } from "react";
 import axios from 'axios';
-
 import windspd from "./assets/windspd.png";
 import humidity from "./assets/humidity.png";
 import clear from "./assets/cleary.gif";
@@ -41,14 +40,13 @@ function App() {
     setLocation("")
   };
 
-
   return (
     <>
       <div className='myimageTag' >
         <img src={`${myimg}`} />
       </div>
       <div className="App">
-        <form className="search">
+        <div className="search">
           <input className="myinput" type="text"
             value={location}
             placeholder="შეიყვანეთ ადგილი"
@@ -56,7 +54,7 @@ function App() {
             onChange={event => setLocation(event.target.value)}
           />
           <button className="mybutton" type="submit" onClick={handleClick}>ძებნა</button>
-        </form>
+        </div>
         <div className="info">
           <div className="location">
             {data.name ? <h3>ადგილმდებარეობა {data.name}</h3> : null}
