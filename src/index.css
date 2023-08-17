@@ -34,7 +34,7 @@ body {
   bottom: 0;
   width: 100vw;
   height: 100vh;
-  opacity: 40%;
+  opacity: 30%;
 }
 
 .myimageTag img {
@@ -45,8 +45,8 @@ body {
 
 .App {
   border-radius: 10px;
-  background-color: rgba(255, 253, 253, 0.8);
-  color: rgb(129, 124, 124);
+  background-color: rgba(255, 253, 253, 0.9);
+  color: #329D9C;
   margin-top: 20px;
   width: 300px;
   text-align: center;
@@ -72,8 +72,8 @@ body {
 }
 
 .humspd {
-  width: 30px;
-  height: 30px;
+  width: 35px;
+  height: 35px;
   border-radius: 10px;
   margin-right: 5px;
 }
@@ -99,7 +99,13 @@ h4 {
   border-radius: 10px;
   height: 25px;
   width: 70px;
-  background-color: greenyellow;
-  margin-top: 10px;
- outline: none;
+  background-color:blueviolet;
+  margin-top: 15px;
+  outline: none;
+  color: white;
+  font-weight: bold;
+  transition: 0.4s;
+}
+.mybutton:hover{
+  transform: scale(1.2);
 }

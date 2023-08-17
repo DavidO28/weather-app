@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import axios from 'axios';
 import windspd from "./assets/windspd.png";
 import humidity from "./assets/humidity.png";
@@ -22,6 +22,13 @@ function App() {
     }
   }
   const url = `https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=c73986543f4485fa7a8de8ea178ba006&units=metric`;
+
+  // useEffect(() => {
+  //   axios.get(url).then((response) => {
+  //     setData(response.data)
+  //   })
+  //   setLocation("")
+  // }, []);
 
   const searchLocation = (event) => {
     if (event.key === "Enter") {
@@ -60,7 +67,7 @@ function App() {
             {data.name ? <h3>ადგილმდებარეობა {data.name}</h3> : null}
           </div>
           <div className="temp">
-            {data.main ? <h1>ტემპერატურა {data.main.temp.toFixed()}°C</h1> : null}
+            {data.main ? <h1>{data.main.temp.toFixed()}°C</h1> : null}
           </div>
         </div>
         <div className="more_info">
